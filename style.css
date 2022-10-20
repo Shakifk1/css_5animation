@@ -166,6 +166,20 @@ body{
 /* Animation for page 2 END */
 /* ************************************************************************************************ */
 /* Animation for page 3 START */
+.azadi {
+    text-align: center;
+    font-size: 40px;
+    opacity: 0.8;
+}
+.happy {
+    background-color: #FF9933; 
+}
+.inde {
+    background-color: #FFFFFF; 
+}
+.day {
+    background-color: #138808; 
+}
 
 .sky {
     height: 100vh;
@@ -249,8 +263,8 @@ body{
     100%{transform: rotate(360deg);}   
  }
  .flag {
-    left: 65%;
-    bottom: 271px;
+    left: 55%;
+    bottom: 195px;
     position: absolute;
     z-index:3;
  }
@@ -258,14 +272,6 @@ body{
     width: 72px;
     height: 72px;
     animation: flag 1s linear infinite;
- }
- .flag1 {
-    right: 80px;
-    position: absolute;
- }
- .flag2 {
-    right: 90px;
-    position: absolute;
  }
  @keyframes flag {
     100%{transform: translateY(-1px);}
