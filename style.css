@@ -1,0 +1,291 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: #ffff57;
+}
+/* for links */
+.links {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Animation for page 1 START */
+#middle {
+    width: 30%;
+    margin: auto;
+}
+
+.animation-div1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    /* margin: auto; */
+}
+/* Animation for first three boxes */
+.abox1 {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    transform: skewX(30deg);
+    transition: transform 2s;
+    animation: first3 ease 10s infinite;
+}
+ @keyframes first3 {
+    50% {transform: skewX(-30deg);}  
+    100%{transform: skewX(30deg);} 
+} 
+.abox2 {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: skyblue;
+    transform: skewX(45deg);
+    /* transition: transform 3s; */
+    animation: second3 ease 5s infinite;
+}
+@keyframes second3 { 
+    50%{transform: skewX(-45deg);}
+    100%{transform: skewX(45deg);}
+}
+.abox3 {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    animation: third3  2s infinite;
+}
+@keyframes third3 {
+    100%{transform: rotate(360deg);}
+    
+}
+.animation-div2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.abox4 {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    animation: fourth1 5s infinite;
+}
+@keyframes fourth1 {
+    50%{transform: scaleY(0.6);}
+    100%{transform: scale(1);}
+    
+}
+.abox5 {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    animation: forth2 5s infinite;
+}
+@keyframes forth2 {
+    50%{transform: scaleX(0.4);}
+    100%{transform: scale(1);}
+    
+}
+.abox6 {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    animation: fourth3 2s infinite;
+}
+@keyframes fourth3 {
+    50%{transform: rotate(90deg);}
+    100%{transform: rotate(0deg);}
+    
+}
+
+/* Animation for page 1 END */
+/* ********************************************************************************************************* */
+/* Animation for page 2 START */
+
+.hbox {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    /* margin: auto; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.hover-box1 {
+    transition: width 3s ease;
+}
+.hover-box1:hover {
+    width: 400px;
+}
+
+.hover-box2 {
+    transition: width 2s,height 3s;
+}
+.hover-box2:hover {
+    width: 400px;
+    height: 400px;
+}
+.hover-box2:hover {
+    width: 400px;
+}
+.hover-box3 {
+    transition: width 3s ease-in-out;
+}
+.hover-box3:hover {
+    width: 400px;
+}
+.hover-box4 {
+    transition: width 3s ease-out;
+}
+.hover-box4:hover {
+    width: 400px;
+}
+.hover-box5 {
+    transition: width 3s linear;
+}
+.hover-box5:hover {
+    width: 400px;
+}
+.hover-box6 {
+    transition: width 3s ease-in;
+}
+.hover-box6:hover {
+    width: 400px;
+}
+.hover-box7 {
+    transition: width 3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.hover-box7:hover {
+    width: 400px;
+}
+
+/* Animation for page 2 END */
+/* ************************************************************************************************ */
+/* Animation for page 3 START */
+
+.sky {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./sky.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+.highway {
+    height: 200px;
+    width: 500%;
+    display: block;
+    background-image: url(./road.jpg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1; 
+    background-repeat: repeat-x;
+    animation: highway 3s linear infinite; 
+}
+@keyframes highway {
+    100%{transform: translateX(-2500px);} 
+}
+.city {
+    height: 250px;
+    width: 500%;
+    background-image: url(./city.png);
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+}
+@keyframes city {
+    100%{transform: translateX(-1500px);}    
+}
+.car {
+    width: 400px;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.car img {
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+@keyframes car {
+    100%{transform: translateY(-1px);}
+    50%{transform: translateY(1px);}
+    0%{transform: translateY(-1px);}   
+}
+ .wheel {
+    left: 50%;
+    bottom: 178px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index:2;
+ }
+ .wheel img {
+    width:72px;
+    height: 72px;
+    animation: wheel 1s linear infinite;
+ }
+ .back-wheel {
+    left: -165px;
+    position: absolute;
+ }
+ .front-wheel {
+    left: 80px;
+    position: absolute;
+ }
+ @keyframes wheel {
+    100%{transform: rotate(360deg);}   
+ }
+ .flag {
+    left: 65%;
+    bottom: 271px;
+    position: absolute;
+    z-index:3;
+ }
+ .flag img {
+    width: 72px;
+    height: 72px;
+    animation: flag 1s linear infinite;
+ }
+ .flag1 {
+    right: 80px;
+    position: absolute;
+ }
+ .flag2 {
+    right: 90px;
+    position: absolute;
+ }
+ @keyframes flag {
+    100%{transform: translateY(-1px);}
+    50%{transform: translateY(1px);}
+    0%{transform: translateY(-1px);}
+ }
+
+ .sun {
+    position: absolute;
+    right: 600px;
+    z-index: 4;
+    background-repeat: repeat-x;
+    animation: sun 140s linear infinite;
+}
+.sun img {
+    position: absolute;
+    left: 600px;
+}
+@keyframes sun {
+    100%{transform: translateX(-2000px);}    
+}
+
+/* Animation for page 3 END */
